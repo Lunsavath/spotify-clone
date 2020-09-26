@@ -8,8 +8,20 @@
   padding: 0px 10px;
 }
 
+.side_bar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+
 .sidebar_logo {
-  object-fit: contain;
+  margin-right: auto;
   height: 70px;
-  width: 100%;
+  padding: 10px;
+}
+
+.sidebar_playlist {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 14px;
 }
