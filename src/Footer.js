@@ -6,31 +6,38 @@ import SkipNextIcon from "@material-ui/icons/SkipNext";
 import ShuffleIcon from "@material-ui/icons/Shuffle";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
-import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import { Grid, Slider } from "@material-ui/core";
 
 function Footer() {
   return (
     <div className={classes.footer}>
-      <div className={classes.footer_left}>Album and song details</div>
+      <div className={classes.footer_left}>
+        <img className={classes.footer_songLogo} src="" alt="" />
+        <div className={classes.footer_songInfo}>
+          <h4>Bob Marley</h4>
+          <p>Om nama </p>
+        </div>
+      </div>
       <div className={classes.footer_middle}>
-        <ShuffleIcon />
-        <SkipPreviousIcon />
-        <PlayCircleOutlineIcon />
-        <SkipNextIcon />
-        <RepeatIcon />
+        <ShuffleIcon className={classes.footer_green} />
+        <SkipPreviousIcon className={classes.footer_icon} />
+        <PlayCircleOutlineIcon
+          fontSize="large"
+          classname={classes.footer_icon}
+        />
+        <SkipNextIcon className={classes.footer_icon} />
+        <RepeatIcon className={classes.footer_green} />
       </div>
       <div className={classes.footer_right}>
-        {" "}
         <Grid container spacing={2}>
-          <Grid item>
+          <Grid>
             <PlaylistPlayIcon />
           </Grid>
-          <Grid item>
+          <Grid>
             <VolumeDownIcon />
           </Grid>
-          <Grid item xs>
+          <Grid xs>
             <Slider aria-labelledby="continuous-slider" />
           </Grid>
         </Grid>
